@@ -1,10 +1,37 @@
 [build]
   publish = "/"
+
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
+
+# Редиректы для Identity (чтобы ссылки из писем вели в админку)
+[[redirects]]
+  from = "/.netlify/identity/confirm"
+  to = "/admin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/.netlify/identity/recover"
+  to = "/admin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/.netlify/identity/signup"
+  to = "/admin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/.netlify/identity/login"
+  to = "/admin/"
+  status = 301
+  force = true
