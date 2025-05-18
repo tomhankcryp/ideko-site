@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: tomhankcryp/ideko-site
   branch: main
-  login: true
+  base_url: https://promts.space
+  auth_endpoint: /api/auth
 
 media_folder: "assets/imgs/uploads"
 public_folder: "/assets/imgs/uploads"
