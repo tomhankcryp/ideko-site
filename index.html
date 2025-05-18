@@ -935,17 +935,16 @@
   <script src="assets/js/vendors/alpine.min.js"></script>
 
   <script src="assets/js/main.js"></script>
-  <script>
-  const hash = window.location.hash;
-  if (
-    hash.includes("confirmation_token") ||
-    hash.includes("recovery_token") ||
-    hash.includes("invite_token")
-  ) {
-    window.location.href = "/admin/" + hash;
-  }
-</script>
-
+    <script>
+      const hash = window.location.hash;
+      if (
+        hash.includes("confirmation_token") ||
+        hash.includes("recovery_token") ||
+        hash.includes("invite_token")
+      ) {
+        window.location.replace("/admin/" + hash);
+      }
+    </script>
 </body>
 
 </html>
